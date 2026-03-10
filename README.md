@@ -26,7 +26,7 @@ QuizGen/
 └── backend/
 ```
 
-## Project Structure (Steps 1–6 complete)
+## Frontend Structure
 
 ### `utils/parseQuizJson.js`
 Cleans and parses the AI's raw text response into a usable JavaScript object. Handles markdown fences and extra text the AI might wrap around the JSON. Returns `null` on invalid input.
