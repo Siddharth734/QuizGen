@@ -1,8 +1,20 @@
-# QUIZGen
+# [ ◈ ]  QUIZGen
 
-An AI-powered quiz generator built with React, Vite, and Tailwind CSS.
+![status](https://img.shields.io/badge/status-active-4ade80?style=flat-square)
+![stack](https://img.shields.io/badge/frontend-React_+_Vite_+_Tailwind-60a5fa?style=flat-square)
+![license](https://img.shields.io/badge/license-MIT-a78bfa?style=flat-square)
 
-## Folder Structure
+> AI-powered quiz generator built with React, Vite, and Tailwind CSS.
+
+---
+
+## ✦ What is this?
+
+QUIZGen lets you pick any topic and instantly generates a quiz using AI. Type a topic or pick one from the suggestions — the app handles the rest and walks you through the questions in a clean chat-style interface.
+
+> Built as a hands-on AI project to explore LLM-powered apps with a React frontend.
+
+## ✦ Project Structure
 
 ```
 QuizGen/
@@ -15,7 +27,8 @@ QuizGen/
 │   │   │   │   └── TopicChips.jsx
 │   │   │   └── Layout/
 │   │   │       ├── WelcomeScreen.jsx
-│   │   │       └── Header.jsx
+│   │   │       ├── Header.jsx
+│   │   │       └── InputBar.jsx
 │   │   ├── utils/
 │   │   │   ├── parseQuizJson.js
 │   │   │   └── generateSessionId.js
@@ -26,7 +39,7 @@ QuizGen/
 └── backend/
 ```
 
-## Frontend Structure
+## ✦ Frontend Structure
 
 ### `utils/parseQuizJson.js`
 Cleans and parses the AI's raw text response into a usable JavaScript object. Handles markdown fences and extra text the AI might wrap around the JSON. Returns `null` on invalid input.
@@ -46,9 +59,17 @@ The landing view shown before any quiz starts. Renders a greeting and mounts `To
 ### `components/Layout/Header.jsx`
 The fixed top bar showing the app name/logo. Fully standalone — no props or dependencies.
 
-## Run Locally
+### `components/Layout/InputBar.jsx`
+The text input at the bottom of the screen. Accepts a topic from the user and submits it to generate a quiz. Has two keyboard shortcuts baked in: pressing Enter submits the form, and typing any letter from anywhere on the page auto-focuses the input. Props: `input`, `loading`, `onChange`, `onSubmit`.
 
-Make sure you have **Node.js (v18+)** and **npm** installed.
+## ✦ Tech Stack
+
+| Layer    | Tech                      |
+|----------|---------------------------|
+| Frontend | React, Vite, Tailwind CSS |
+| Backend  | Coming soon               |
+
+## ✦ Getting Started
 
 ```bash
 # 1. Clone the repo
@@ -63,3 +84,20 @@ npm run dev
 ```
 
 Then open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## ✦ Roadmap
+
+- [x] Utility functions (parse, session ID)
+- [x] Core UI components (OptionButton, TopicChips)
+- [x] Layout components (Header, WelcomeScreen, InputBar)
+- [ ] Chat components (QuizCard, Message, ChatContainer)
+- [ ] App state + full quiz flow
+- [ ] Backend + AI integration
+
+## ✦ License
+
+MIT — use it, fork it, build on it.
+
+---
+
+Made by **Siddharth** · [Portfolio](#) · [LinkedIn](#)
