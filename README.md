@@ -1,20 +1,36 @@
-# ⚡ QUIZGen
+<div align="center">
 
-![status](https://img.shields.io/badge/status-active-4ade80?style=flat-square)
-![stack](https://img.shields.io/badge/built_with-React_+_Vite_+_Tailwind-60a5fa?style=flat-square)
-![license](https://img.shields.io/badge/license-MIT-a78bfa?style=flat-square)
+  <h1>◈ QUIZGen</h1>
+  
+  <p><strong>LLM-wrapper quiz generator - React frontend, LangChain + FastAPI backend.</strong></p>
 
-> AI-powered quiz generator built with React, Vite, and Tailwind CSS.
+  <p>
+    <img src="https://img.shields.io/badge/React-18+-61DAFB" alt="React"/>
+    <img src="https://img.shields.io/badge/Vite-5+-646CFF" alt="Vite"/>
+    <img src="https://img.shields.io/badge/Tailwind_CSS-3+-06B6D4" alt="Tailwind"/>
+    <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License"/>
+    <img src="https://img.shields.io/badge/Status-Active-success" alt="Status"/>
+  </p>
+
+</div>
 
 ---
 
-## ✦ What is this?
+## What is this?
 
 QUIZGen lets you pick any topic and instantly generates a quiz using AI. Type a topic or pick one from the suggestions — the app handles the rest and walks you through the questions in a clean chat-style interface.
 
 > Built as a hands-on AI project to explore LLM-powered apps with a React frontend.
 
-## ✦ Project Structure
+## Features
+
+- 🎯 **Topic-based generation** — type any topic or pick from suggestions
+- 🧠 **Multiple question types** — MCQ, fill-in-the-blank, and open Q&A
+- ✅ **Instant scoring** — per-question feedback with a final score
+- ⌨️ **Keyboard-first UX** — Enter to submit, any key to focus input
+- 💾 **Session tracking** — each quiz run gets a unique session ID
+
+## Project Structure
 
 ```
 QuizGen/
@@ -41,7 +57,7 @@ QuizGen/
 └── backend/
 ```
 
-## ✦ Frontend Structure (Steps 1–8 complete)
+## Frontend Structure (Steps 1–8 complete)
 
 ### `utils/parseQuizJson.js`
 Cleans and parses the AI's raw text response into a usable JavaScript object. Handles markdown fences and extra text the AI might wrap around the JSON. Returns `null` on invalid input.
@@ -62,45 +78,55 @@ The landing view shown before any quiz starts. Renders a greeting and mounts `To
 The fixed top bar showing the app name/logo. Fully standalone — no props or dependencies.
 
 ### `components/Layout/InputBar.jsx`
-The text input at the bottom of the screen. Accepts a topic from the user and submits it to generate a quiz. Has two keyboard shortcuts baked in: pressing Enter submits the form, and typing any letter from anywhere on the page auto-focuses the input. Props: `input`, `loading`, `onChange`, `onSubmit`.
+The text input at the bottom of the screen. Accepts a topic and submits it to generate a quiz. Pressing Enter submits the form; typing any letter from anywhere on the page auto-focuses the input. Props: `input`, `loading`, `onChange`, `onSubmit`.
 
 ### `components/Chat/QuizCard.jsx`
-Renders the full quiz — question by question. Tracks selected answers in `answers` state, scores them on submit, and shows per-question feedback (correct/wrong/skipped) with a final score in the header. Supports MCQ (via `OptionButton`), fill-in-the-blank, and open Q&A question types, detected automatically from the question data.
+Renders the full quiz — question by question. Tracks selected answers in `answers` state, scores them on submit, and shows per-question feedback (correct/wrong/skipped) with a final score in the header. Supports MCQ (via `OptionButton`), fill-in-the-blank, and open Q&A types, detected automatically from the question data.
 
-## ✦ Tech Stack
+## Tech Stack
 
 | Layer    | Tech                      |
 |----------|---------------------------|
 | Frontend | React, Vite, Tailwind CSS |
 | Backend  | Coming soon               |
 
-## ✦ Getting Started
+## Getting Started
 
-```bash
-# 1. Clone the repo
-git clone https://github.com/your-username/quizgen.git
-cd quizgen/frontend
+### Prerequisites
 
-# 2. Install dependencies
-npm install
+- **Node.js v18+** and **npm**
 
-# 3. Start the dev server
-npm run dev
-```
+### Installation
+
+1. **Clone the repo**
+   ```bash
+   git clone https://github.com/your-username/quizgen.git
+   cd quizgen/frontend
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the dev server**
+   ```bash
+   npm run dev
+   ```
 
 Then open [http://localhost:5173](http://localhost:5173) in your browser.
 
-## ✦ Roadmap
+## Roadmap
 
 - [x] Utility functions (parse, session ID)
 - [x] Core UI components (OptionButton, TopicChips)
 - [x] Layout components (Header, WelcomeScreen, InputBar)
-- [x] QuizCard chat component (85-90% completed)
+- [x] QuizCard chat component
 - [ ] Message and ChatContainer components
 - [ ] App state + full quiz flow
 - [ ] Backend + AI integration
 
-## ✦ License
+## License
 
 MIT — use it, fork it, build on it.
 
