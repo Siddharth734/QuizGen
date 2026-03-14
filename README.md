@@ -2,7 +2,7 @@
 
   <h1>◈ QUIZGen</h1>
   
-  <p><strong>LLM-wrapper quiz generator - React frontend, LangChain + FastAPI backend.</strong></p>
+  <p><strong>LLM-wrapper quiz generator - React frontend, LangChain + FastAPI API.</strong></p>
 
   <p>
     <img src="https://img.shields.io/badge/React-18+-61DAFB" alt="React"/>
@@ -54,7 +54,7 @@ QuizGen/
 │   ├── index.html
 │   └── vite.config.js
 │
-└── backend/
+└── api/                 # LangChain + FastAPI (coming soon)
 ```
 
 ## Frontend Structure (Steps 1–8 complete)
@@ -85,10 +85,10 @@ Renders the full quiz — question by question. Tracks selected answers in `answ
 
 ## Tech Stack
 
-| Layer    | Tech                      |
-|----------|---------------------------|
-| Frontend | React, Vite, Tailwind CSS |
-| Backend  | Coming soon               |
+| Layer    | Tech                             |
+|----------|----------------------------------|
+| Frontend | React, Vite, Tailwind CSS        |
+| API      | FastAPI, LangChain (coming soon) |
 
 ## Getting Started
 
@@ -122,9 +122,10 @@ Then open [http://localhost:5173](http://localhost:5173) in your browser.
 - [x] Core UI components (OptionButton, TopicChips)
 - [x] Layout components (Header, WelcomeScreen, InputBar)
 - [x] QuizCard chat component
-- [ ] Message and ChatContainer components
+- [x] Message and ChatContainer components
 - [ ] App state + full quiz flow
-- [ ] Backend + AI integration
+- [ ] LangChain + LLM wrapper setup (Python)
+- [ ] FastAPI routing + frontend integration
 
 ## License
 
@@ -132,4 +133,4 @@ MIT — use it, fork it, build on it.
 
 ---
 
-Made by **Siddharth** · [Portfolio](#) · [LinkedIn](#)
+Made by **Siddharth** · [Portfolio](#) · [LinkedIn](www.linkedin.com/in/siddharth-baghel-616714365)
