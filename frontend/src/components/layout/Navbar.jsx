@@ -2,11 +2,11 @@ export default function Navbar({ sessionId, onReset }) {
     return (
         <div className="flex items-center justify-between border-b border-gray-700 bg-black p-5 font-mono">
             <div className="flex items-center gap-4">
-                <div className="flex items-center justify-center text-green-300 text-4xl shrink-0">
+                <div className="flex items-center justify-center text-green-400 text-4xl shrink-0">
                     ◈
                 </div>
                 <div className="flex flex-col">
-                    <div className="text-green-300 text-lg font-bold tracking-[4px]">
+                    <div className="text-green-400 text-lg font-bold tracking-[4px]">
                         QUIZGen
                     </div>
                     <div className="text-[9px] tracking-[3px] text-gray-800">

@@ -4,7 +4,7 @@ import TopicSuggestions from "../ui/TopicSuggestions";
 export default function WelcomeScreen({ onSelect }) {
     
     return (
-        <div className="flex flex-col justify-center items-center pt-[12vh] text-green-300">
+        <div className="flex flex-col justify-center items-center pt-[12vh] text-green-400">
             <span className="text-6xl mb-4">◈</span>
             <h1 className="text-5xl font-bold tracking-[8px] mb-2">
                 QuizGen

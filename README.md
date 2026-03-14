@@ -1,7 +1,7 @@
-# [ ◈ ]  QUIZGen
+# ⚡ QUIZGen
 
 ![status](https://img.shields.io/badge/status-active-4ade80?style=flat-square)
-![stack](https://img.shields.io/badge/frontend-React_+_Vite_+_Tailwind-60a5fa?style=flat-square)
+![stack](https://img.shields.io/badge/built_with-React_+_Vite_+_Tailwind-60a5fa?style=flat-square)
 ![license](https://img.shields.io/badge/license-MIT-a78bfa?style=flat-square)
 
 > AI-powered quiz generator built with React, Vite, and Tailwind CSS.
@@ -25,10 +25,12 @@ QuizGen/
 │   │   │   ├── UI/
 │   │   │   │   ├── OptionButton.jsx
 │   │   │   │   └── TopicChips.jsx
-│   │   │   └── Layout/
-│   │   │       ├── WelcomeScreen.jsx
-│   │   │       ├── Header.jsx
-│   │   │       └── InputBar.jsx
+│   │   │   ├── Layout/
+│   │   │   │   ├── WelcomeScreen.jsx
+│   │   │   │   ├── Header.jsx
+│   │   │   │   └── InputBar.jsx
+│   │   │   └── Chat/
+│   │   │       └── QuizCard.jsx
 │   │   ├── utils/
 │   │   │   ├── parseQuizJson.js
 │   │   │   └── generateSessionId.js
@@ -39,7 +41,7 @@ QuizGen/
 └── backend/
 ```
 
-## ✦ Frontend Structure
+## ✦ Frontend Structure (Steps 1–8 complete)
 
 ### `utils/parseQuizJson.js`
 Cleans and parses the AI's raw text response into a usable JavaScript object. Handles markdown fences and extra text the AI might wrap around the JSON. Returns `null` on invalid input.
@@ -61,6 +63,9 @@ The fixed top bar showing the app name/logo. Fully standalone — no props or de
 
 ### `components/Layout/InputBar.jsx`
 The text input at the bottom of the screen. Accepts a topic from the user and submits it to generate a quiz. Has two keyboard shortcuts baked in: pressing Enter submits the form, and typing any letter from anywhere on the page auto-focuses the input. Props: `input`, `loading`, `onChange`, `onSubmit`.
+
+### `components/Chat/QuizCard.jsx`
+Renders the full quiz — question by question. Tracks selected answers in `answers` state, scores them on submit, and shows per-question feedback (correct/wrong/skipped) with a final score in the header. Supports MCQ (via `OptionButton`), fill-in-the-blank, and open Q&A question types, detected automatically from the question data.
 
 ## ✦ Tech Stack
 
@@ -90,7 +95,8 @@ Then open [http://localhost:5173](http://localhost:5173) in your browser.
 - [x] Utility functions (parse, session ID)
 - [x] Core UI components (OptionButton, TopicChips)
 - [x] Layout components (Header, WelcomeScreen, InputBar)
-- [ ] Chat components (QuizCard, Message, ChatContainer)
+- [x] QuizCard chat component (85-90% completed)
+- [ ] Message and ChatContainer components
 - [ ] App state + full quiz flow
 - [ ] Backend + AI integration
 

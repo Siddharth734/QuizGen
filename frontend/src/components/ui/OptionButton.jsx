@@ -16,7 +16,7 @@ optionStyles = {
     },
 
     selected: {
-        button: "bg-[#242703] border-yellow-200 text-yellow-200",
+        button: "bg-[#242703] border-yellow-400 text-yellow-200",
     },
 
     wrong: {
@@ -24,7 +24,7 @@ optionStyles = {
     },
 
     correct: {
-        button: "bg-green-950 border-green-300 text-green-300",
+        button: "bg-green-950 border-green-400 text-green-400",
     },
 }
 
