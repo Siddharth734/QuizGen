@@ -6,8 +6,8 @@ export default function ChatContainer({ messages, onTopicSelect}) {
     return (
         <div className="flex-1 overflow-y-auto">
             <div className="w-full px-6 py-5">
-                {(messages.length >= 10) ? messages.map((msg,i) => <Message key={i} msg={msg}/> )
-                : <WelcomeScreen onSelect={onTopicSelect}/>}
+                {(messages.length === 0) ? <WelcomeScreen onSelect={onTopicSelect}/> 
+                : messages.map((msg,i) => <Message key={i} msg={msg}/> )}
             </div>
         </div>
     );

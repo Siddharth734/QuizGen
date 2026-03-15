@@ -97,9 +97,9 @@ export default function QuizCard({ questions }) {
                                         : (isCorrect) ? "border-green-400 text-green-400" : "border-red-400 text-red-400"
                                     }`} />
                         ) : (
-                            < div className="w-full border border-gray-800 bg-black font-mono">
+                            < div className="w-full p-2 border border-gray-800 bg-black font-mono">
                                 <h1 className="border-b text-green-400">Ans:</h1>
-                                <p className="px-4 py-2.5 text-sm text-green-100">
+                                <p className="px-2 py-2 text-sm text-green-100">
                                     {q.answer}
                                 </p>
                             </div>

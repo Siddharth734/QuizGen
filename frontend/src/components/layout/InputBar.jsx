@@ -22,7 +22,7 @@ export default function InputBar({ input, loading, onChange, onSubmit }) {
 
 
     return (
-        <div className="bg-black border-t border-white/5 px-4 py-3 shrink-0">
+        <div className="border-white/5 px-4 py-3 shrink-0">
             <div className="flex gap-3">
                 <div className="flex-1 border border-gray-800 bg-black px-4 py-2.5 transition-all duration-200 focus-within:border-green-900 rounded-2xl">
                     <textarea ref={inputRef} value={input} onChange={(e) => onChange(e.target.value)} onKeyDown={keySetter}

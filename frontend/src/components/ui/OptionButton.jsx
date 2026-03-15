@@ -10,7 +10,7 @@ const getOptionStyle = (opt, userAns, correctAns, isSubmitted) => {
     return "default";
 }
 
-optionStyles = {
+const optionStyles = {
     default: {
         button: "bg-black border-gray-800 text-gray-600 hover:border-gray-200 hover:text-gray-200",
     },
@@ -28,7 +28,7 @@ optionStyles = {
     },
 }
 
-optionIcons = {
+const optionIcons = {
     correct: "✓",
     wrong: "X",
     default: null,
