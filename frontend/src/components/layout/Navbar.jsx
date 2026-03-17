@@ -1,3 +1,5 @@
+import HackText from "../ui/HackText"
+
 export default function Navbar({ sessionId, onReset }) {
     return (
         <div className="flex items-center justify-between border-b border-gray-700 bg-black/2 px-5 py-3 font-mono">
@@ -17,9 +19,10 @@ export default function Navbar({ sessionId, onReset }) {
 
             <div className="flex items-center gap-4">
                 <div className="hidden sm:block text-sm font-bold tracking-[2px] text-gray-800">
-                    {`SID: ${sessionId.toUpperCase().slice(-8)}`}
+                    {/* {`SID: ${sessionId.toUpperCase().slice(-8)}`} */}
+                    <HackText s_text={"USER_SESSION_ID"} text={sessionId.toUpperCase().slice(-15)}/>
                 </div>
-                <button onClick={onReset} className="border border-gray-800 px-2.5 py-1.5 tracking-[2px] text-gray-600 transition-all duration-200 hover:border-red-500 hover:text-red-500">
+                <button onClick={onReset} className="border border-gray-800 rounded-lg px-2.5 py-1.5 tracking-[2px] text-sm font-bold text-gray-600 transition-all duration-200 hover:border-red-500 hover:text-red-500">
                     RESET
                 </button>
             </div>
