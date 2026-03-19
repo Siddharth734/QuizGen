@@ -1,11 +1,12 @@
 from langchain.chat_models import init_chat_model
-from backend.core.config import settings
-from backend.utils.message_builder import build_messages
-from backend.services.session_service import get_session, append_message
+from quizgen_api.core.config import settings
+from quizgen_api.utils.message_builder import build_messages
+from quizgen_api.services.session_service import get_session, append_message
 
 model = init_chat_model(
     model = settings.LLM_MODEL,
-    model_provider = settings.LLM_PROVIDER
+    model_provider = settings.LLM_PROVIDER,
+    api_key=settings.API_KEY
 )
 
 async def get_chat_response(session_id: str, user_message: str) -> str:
