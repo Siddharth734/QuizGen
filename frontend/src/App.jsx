@@ -4,7 +4,7 @@ import Navbar from "./components/layout/Navbar"
 import InputBar from "./components/layout/InputBar"
 import ChatContainer from "./components/chat/ChatContainer"
 
-const API_LINK = "http://localhost:8000"
+const API_LINK = import.meta.env.VITE_API_URL || "http://localhost:8000"
 
 export default function App() {
   const [sessionId] = useState(generateSessionId);
