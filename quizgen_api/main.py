@@ -18,6 +18,14 @@ app.add_middleware(
     allow_headers = ["*"]
 )
 
+@app.get("/")
+async def root():
+    return {
+        "message": "QuizGen API",
+        "status": "running",
+        "version": settings.APP_VERSION
+    }
+
 app.include_router(chat.router)
 app.include_router(health.router)
 app.include_router(session.router)
