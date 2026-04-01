@@ -12,7 +12,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins = ["https://quizgen-v1.vercel.app/"],
+    allow_origins = ["https://quizgen-v1.vercel.app"],
     allow_credentials = True,
     allow_methods = ["*"],
     allow_headers = ["*"]
