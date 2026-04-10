@@ -5,7 +5,7 @@ export default function Navbar({ sessionId, onReset }) {
         <div className="flex items-center justify-between border-b border-gray-700 bg-black/2 px-5 py-3 font-mono">
             <div className="flex items-center gap-4">
                 <div className="flex items-center justify-center text-green-400 text-4xl shrink-0">
-                    ◈
+                    <i class="ri-tent-line"></i>
                 </div>
                 <div className="flex flex-col">
                     <div className="text-green-400 text-xl font-bold tracking-[4px]">

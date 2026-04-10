@@ -1,4 +1,4 @@
-const TOPICS = ["DSA", "Sports", "History", "GenAI", "Movies", "Dhurandar movie"];
+const TOPICS = ["DSA", "Sports", "History", "GenAI", "Movies", "Politics"];
 
 export default function TopicSuggestions({ onSelect }) {
     return (
