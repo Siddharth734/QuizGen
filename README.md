@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1>◈ QUIZGen</h1>
+  <h1>QUIZ Generator</h1>
   
   <p><strong>LLM-wrapper quiz generator - React frontend, LangChain + FastAPI API.</strong></p>
 
@@ -123,9 +123,9 @@ Then open [http://localhost:5173](http://localhost:5173) in your browser.
 - [x] Layout components (Header, WelcomeScreen, InputBar)
 - [x] QuizCard chat component
 - [x] Message and ChatContainer components
-- [ ] App state + full quiz flow
-- [ ] LangChain + LLM wrapper setup (Python)
-- [ ] FastAPI routing + frontend integration
+- [x] App state + full quiz flow
+- [x] LangChain + LLM wrapper setup (Python)
+- [x] FastAPI routing + frontend integration
 
 ## License
 
