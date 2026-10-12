@@ -2,7 +2,7 @@
 
   <h1>QUIZ Generator</h1>
   
-  <p><strong>LLM-wrapper quiz generator - React frontend, LangChain + FastAPI API.</strong></p>
+  <p><strong>LLM-powered quiz generator — React frontend with JavaScript/Express and Python/FastAPI backend options.</strong></p>
 
   <p>
     <img src="https://img.shields.io/badge/React-18+-61DAFB" alt="React"/>
@@ -88,7 +88,7 @@ Renders the full quiz — question by question. Tracks selected answers in `answ
 | Layer    | Tech                             |
 |----------|----------------------------------|
 | Frontend | React, Vite, Tailwind CSS        |
-| API      | FastAPI, LangChain (coming soon) |
+| API      | Node.js, Express, LangChain.js (JavaScript option); FastAPI, LangChain (Python option) |
 
 ## Getting Started
 
@@ -125,7 +125,9 @@ Then open [http://localhost:5173](http://localhost:5173) in your browser.
 - [x] Message and ChatContainer components
 - [x] App state + full quiz flow
 - [x] LangChain + LLM wrapper setup (Python)
+- [x] JavaScript/Express backend conversion (`quizgen_api/README-JS.md`)
 - [x] FastAPI routing + frontend integration
+- [x] Express routes compatible with existing frontend endpoints
 
 ## License
 
@@ -134,3 +136,9 @@ MIT — use it, fork it, build on it.
 ---
 
 Made by **Siddharth** · [Portfolio](#) · [LinkedIn](www.linkedin.com/in/siddharth-baghel-616714365)
+
+## JavaScript backend
+
+The original Python/FastAPI backend remains available. A JavaScript/Node.js + Express version has been added in `quizgen_api/src/`, preserving the existing `/chat`, `/chat/stream`, `/health`, and session endpoints.
+
+See [JavaScript backend setup](quizgen_api/README-JS.md) for dependencies, environment variables, and startup instructions. To run the JavaScript API locally, use `cd quizgen_api && npm install && npm run dev`; set the frontend's `VITE_API_URL` to the API base URL.
